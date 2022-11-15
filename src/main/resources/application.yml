@@ -1,0 +1,4 @@
+graphql:
+  servlet:
+    playground:
+      enable: true
