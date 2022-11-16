@@ -5,6 +5,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.0.15.RELEASE"
 	kotlin("jvm") version "1.6.21"
 	kotlin("plugin.spring") version "1.6.21"
+	kotlin("plugin.jpa") version "1.6.21"
 }
 
 group = "com.pdi"
@@ -22,6 +23,10 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("com.graphql-java-kickstart:graphql-spring-boot-starter:11.0.0")
 	implementation("com.graphql-java-kickstart:playground-spring-boot-starter:11.0.0")
+	implementation ("org.springframework.boot:spring-boot-starter-validation")
+	runtimeOnly("com.h2database:h2:2.1.214")
+	implementation("org.springframework.boot:spring-boot-starter-jdbc")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
